@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { NavContext } from '@/context/NavContext'
+import styles from '@/styles/Nav.module.css'
 
 const navLinks = [
     { navLinkId: 'Home', scrollToId: 'homeContainer' },
@@ -28,7 +29,7 @@ const NavLink = ({ navLinkId, scrollToId }) => {
 
 export default function Nav() {
     return (
-        <nav>
+        <nav className={styles.nav}>
             {navLinks.map(({ navLinkId, scrollToId }, idx) => (
                 <NavLink key={idx} navLinkId={navLinkId} scrollToId={scrollToId} />
             ))}

@@ -1,6 +1,6 @@
-nav {
+.nav {
 	width: 100%;
-	position: sticky;
+	position: fixed;
 	z-index: 10;
 	top: 0;
 	padding: 1.2em 0;
@@ -9,7 +9,7 @@ nav {
 	max-height: 4em;
 }
 
-nav span {
+.nav span {
 	font-size: 18px;
 	border-bottom: 1px solid transparent;
 	transition: border-bottom 0.2s ease;
@@ -18,19 +18,19 @@ nav span {
 	padding-bottom: 0.3em;
 }
 
-nav span:hover {
+.nav span:hover {
 	cursor: pointer;
 	border-bottom: 1px solid white;
 }
 
-nav span:hover i {
+.nav span:hover i {
 	color: gold;
 }
 
-nav span.activeClass i {
+.nav span.activeClass i {
 	color: gold;
 }
 
-nav span.activeClass {
+.nav span.activeClass {
 	border-bottom-color: var(--lightAccent);
 }

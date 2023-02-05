@@ -1,5 +1,5 @@
-import React from 'react';
-import { useNav } from '../customHooks/useNav';
+import React from 'react'
+import { useNav } from '@/customHooks/useNav'
 
 const Contact = () => {
 	// useNav takes in a navLinkId and returns a ref
