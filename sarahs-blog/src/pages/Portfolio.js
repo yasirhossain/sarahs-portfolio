@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNav } from '../customHooks/useNav'
+import Videos from '@/components/Videos'
 
 const Portfolio = () => {
 	// useNav takes in a navLinkId and returns a ref
@@ -11,14 +12,11 @@ const Portfolio = () => {
 
 	return (
 		<section ref={portfolioRef} id='portfolioContainer'>
-			<img
-				src='https://source.unsplash.com/random/600x600/?nature,water'
-				alt='unsplash-img'
-			/>
 			<div>
 				<h3>Portfolio</h3>
 				<p>This is the portfolio section</p>
 			</div>
+			<Videos />
 		</section>
 	);
 };

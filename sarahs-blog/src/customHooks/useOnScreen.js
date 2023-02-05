@@ -11,14 +11,5 @@ export const useOnScreen = ref => {
 		}
 	);
 
-	useEffect(() => {
-		/*
-		observer.observe(ref.current);
-		return () => {
-			observer.disconnect();
-		};
-		*/
-	});
-
 	return isOnScreen;
 };

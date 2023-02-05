@@ -4,7 +4,7 @@
 	z-index: 10;
 	top: 0;
 	padding: 1.2em 0;
-	color: white;
+	color: black;
 	background-color: var(--darkAccent);
 	max-height: 4em;
 }
@@ -20,7 +20,7 @@
 
 .nav span:hover {
 	cursor: pointer;
-	border-bottom: 1px solid white;
+	border-bottom: 1px solid black;
 }
 
 .nav span:hover i {
