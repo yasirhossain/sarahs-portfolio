@@ -1,6 +1,7 @@
 import React from 'react'
 import { useNav } from '../customHooks/useNav'
 import Videos from '@/components/Videos'
+import { style } from '@mui/system';
 
 const Portfolio = () => {
 	// useNav takes in a navLinkId and returns a ref
@@ -12,10 +13,6 @@ const Portfolio = () => {
 
 	return (
 		<section ref={portfolioRef} id='portfolioContainer'>
-			<div>
-				<h3>Portfolio</h3>
-				<p>This is the portfolio section</p>
-			</div>
 			<Videos />
 		</section>
 	);

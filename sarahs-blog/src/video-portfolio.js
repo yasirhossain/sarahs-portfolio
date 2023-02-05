@@ -280,15 +280,6 @@ export const staticVideos = [
     "type": "long-form"
   },
   {
-    "company": "Meredith",
-    "channel": "",
-    "show": "HelloGiggles",
-    "title": "I Suck At Eyeliner So I Tried Haus Labs Eyeliner Stickers",
-    "video": "https://au.lifestyle.yahoo.com/suck-eyeliner-tried-haus-labs-204824238.html",
-    "image": "",
-    "type": "long-form"
-  },
-  {
     "company": "Popsugar",
     "channel": "Popsugar",
     "show": "The Makeup",
