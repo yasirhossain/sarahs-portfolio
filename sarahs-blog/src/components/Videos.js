@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { DateTime } from 'luxon'
 import CircularProgress from '@mui/material/CircularProgress'
 import Alert from '@mui/material/Alert'
 import styles from '@/styles/Videos.module.css'
 import VideoCard from '@/components/VideoCard'
-import { staticVideos } from '@/video-portfolio'
+import { staticVideos, imageSize } from '@/video-portfolio'
 
-const Videos = () => {
+const Videos = (props) => {
     const [videoCards, setVideoCards] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(false);
@@ -17,16 +17,35 @@ const Videos = () => {
         getStaticVideos();
     }, []);
 
+    function youtubeParser(url){
+        var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+        var match = url.match(regExp);
+        return (match&&match[7].length==11)? match[7] : false;
+    }
+
     function getStaticVideos() {
         let newVideoCards = [];
-        videos.map((video, i) => {
-            //const videoId = video.id;
-            // const timestamp = DateTime.fromISO(snippet.publishedAt).toRelative();
+        videos.map((videoItem, i) => {
+            const videoId = youtubeParser(videoItem.video);
+            const image = videoItem.image + imageSize;
+            const channel = videoItem.channel;
+            const company = videoItem.company;
+            const type = videoItem.type;
+            const show = videoItem.show;
+            const title = videoItem.title;
 
-            console.log(video);
+            newVideoCards.push({
+            videoId,
+            image,
+            channel,
+            company,
+            type,
+            show,
+            title
+            });
         });
 
-        setVideoCards(videos);
+        setVideoCards(newVideoCards);
         setIsLoading(false);
     }
 
@@ -54,9 +73,9 @@ const Videos = () => {
 
     async function createVideoCards(videoItems) {
         let newVideoCards = [];
-        videoItems.map((video, i) => {
-            const videoId = video.id;
-            const snippet = video.snippet;    
+        videoItems.map((videoItem, i) => {
+            const videoId = videoItem.id;
+            const snippet = videoItem.snippet;    
             const image = snippet.thumbnails.medium === undefined ? '' : snippet.thumbnails.medium.url;
             const title = snippet.title;
             const timestamp = DateTime.fromISO(snippet.publishedAt).toRelative();
@@ -94,7 +113,9 @@ const Videos = () => {
                             channel={item.channel}
                             type={item.type}
                             show={item.show}
-                            video={item.video}
+                            videoId={item.videoId}
+                            setVideoRef={props.setVideoRef}
+                            setDialogOpen={props.setDialogOpen} 
                         />
                     )
                 })
