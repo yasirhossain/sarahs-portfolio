@@ -67,7 +67,8 @@ const Videos = () => {
             title,
             channel,
             timestamp,
-            image
+            image,
+            type
             });
         });
 
@@ -86,12 +87,14 @@ const Videos = () => {
                 {
                 videoCards.map(item => {
                     return (
-                        <VideoCard key={item.videoId}
+                        <VideoCard key={item.title}
                             title={item.title}
+                            company={item.company}
                             image={item.image}
-                            timestamp={item.timestamp}
                             channel={item.channel}
-                            channelImage={item.channelImage}
+                            type={item.type}
+                            show={item.show}
+                            video={item.video}
                         />
                     )
                 })
