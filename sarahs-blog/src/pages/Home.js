@@ -18,54 +18,9 @@ const Home = () => {
 	return (
 		<section ref={homeRef} id='homeContainer' className={styles.homeContainer}>
 			<div className={styles.center}>
-				<h1>Sarah Hashim-Waris</h1>
-				<p>Video Producer / Creative Director / Script Writer / Talent</p>
-			</div>
-
-			<div className={styles.grid}>
-			<a
-				href="https://www.linkedin.com/in/shashimwaris/"
-				className={styles.card}
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				<h2 className={inter.className}>
-				LinkedIn <span>-&gt;</span>
-				</h2>
-			</a>
-
-			<a
-				href="mailto:sarahhashimwaris@gmail.com"
-				className={styles.card}
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				<h2 className={inter.className}>
-				Email <span>-&gt;</span>
-				</h2>
-			</a>
-
-			<a
-				href="https://www.youtube.com/@sarahhashimwaris"
-				className={styles.card}
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				<h2 className={inter.className}>
-				YouTube <span>-&gt;</span>
-				</h2>
-			</a>
-
-			<a
-				href="https://twitter.com/sarahHwaris"
-				className={styles.card}
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				<h2 className={inter.className}>
-				Twitter <span>-&gt;</span>
-				</h2>
-			</a>
+				<Image className={styles.signature} src={signature} alt="Sarah Hashim-Waris" />
+				<p>Video Producer / Creative Director / Script Writer / Reporter</p>
+				<button class={styles.primaryButton} role="button">View Portfolio</button>
 			</div>
 		</section>
 	);

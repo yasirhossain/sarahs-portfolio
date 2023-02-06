@@ -33,6 +33,29 @@ export default function Nav() {
             {navLinks.map(({ navLinkId, scrollToId }, idx) => (
                 <NavLink key={idx} navLinkId={navLinkId} scrollToId={scrollToId} />
             ))}
+            <div className={styles.grid}>
+			<a
+				href="https://www.linkedin.com/in/shashimwaris/"
+				className={styles.card}
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<h2 className={styles.className}>
+				LinkedIn <span>-&gt;</span>
+				</h2>
+			</a>
+
+			<a
+				href="mailto:sarahhashimwaris@gmail.com"
+				className={styles.card}
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<h2 className={styles.className}>
+				Email <span>-&gt;</span>
+				</h2>
+			</a>
+			</div>
         </nav>
     )
 }
