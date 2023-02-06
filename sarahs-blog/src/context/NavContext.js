@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 export const NavContext = React.createContext();
 
 const NavProvider = ({ children }) => {
-	const [activeNavLinkId, setActiveNavLinkId] = useState('');
+	const [activeNavLinkId, setActiveNavLinkId] = useState('Home');
 
 	const providerValue = {
 		activeNavLinkId,
