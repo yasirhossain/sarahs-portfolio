@@ -1,36 +1,125 @@
-.nav {
-	width: 100%;
+@font-face {
+	font-family: 'Prata rev=2';
+	font-style: normal;
+	font-weight: 400;
+	font-display: block;
+	src: url(https://fonts.gstatic.com/s/prata/v18/6xKhdSpbNNCT-sWCCm7bLnwIcOM.woff2) format('woff2');
+	unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+
+.wrapper{
 	position: fixed;
-	z-index: 10;
+	z-index: 5;
 	top: 0;
-	padding: 1.2em 0;
-	color: black;
-	background-color: var(--darkAccent);
-	max-height: 4em;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	/*background: linear-gradient(-135deg, #c850c0, #4158d0);*/
+	/* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+   /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%);*/
+	/* clip-path: circle(25px at calc(0% + 45px) 45px); */
+	background: #000;
+	clip-path: circle(25px at calc(100% - 45px) 45px);
+	transition: all 0.3s ease-in-out;
+	font-family: 'Lato', sans-serif;
+	font-family: 'Oswald', sans-serif;
 }
 
-.nav span {
-	font-size: 18px;
-	border-bottom: 1px solid transparent;
-	transition: border-bottom 0.2s ease;
-	transition-delay: 0.25s;
-	margin: 1em;
-	padding-bottom: 0.3em;
+.wrapper.active {
+	clip-path: circle(75%);
 }
-
-.nav span:hover {
+.menuBtn {
+	position: absolute;
+	z-index: 2;
+	right: 20px;
+	top: 20px;
+	height: 50px;
+	width: 50px;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 50%;
+	font-size: 20px;
+	color: #fff;
 	cursor: pointer;
-	border-bottom: 1px solid black;
-}
-
-.nav span:hover i {
-	color: gold;
-}
-
-.nav span.activeClass i {
-	color: gold;
-}
-
-.nav span.activeClass {
-	border-bottom-color: var(--lightAccent);
-}
+	/*background: linear-gradient(-135deg, #c850c0, #4158d0);*/
+	/* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+   /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%); */
+	background: #000;
+	transition: all 0.3s ease-in-out;
+	justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .active .menuBtn {
+	color: #fff;
+  }
+  .active .menuBtn .menuIcon:before {
+	content: "X";
+  }
+  .wrapper ul {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	list-style: none;
+	text-align: center;
+  }
+  .wrapper ul li {
+	margin: 25px 0;
+	font-family: 'Prata rev=2';
+	font-weight: 400;
+	color: #fff;
+	font-size: 2.2rem;
+  }
+  .wrapper ul li.activeClass {
+	color: #ffe54c;
+  }
+  .wrapper ul li a {
+	font-family: 'Prata rev=2';
+	font-weight: 400;
+	color: none;
+	text-decoration: none;
+	font-size: 2.2rem;
+	padding: 15px 30px;
+	color: #fff;
+	border-radius: 50px;
+	background: #000;
+	position: relative;
+	line-height: 50px;
+	transition: all 0.3s ease;
+  }
+  .wrapper ul li a:hover {
+	color: #ffe54c;
+	cursor: pointer;
+  }
+  .wrapper input[type="checkbox"] {
+	display: none;
+  }
+  .content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+	text-align: center;
+	width: 100%;
+	color: #202020;
+  }
+  .content .title {
+	font-size: 40px;
+	font-weight: 700;
+  }
+  .content p {
+	font-size: 35px;
+	font-weight: 600;
+  }
+  
+  @keyframes rotate {
+	0%{
+	  filter: hue-rotate(0deg);
+	}
+	100%{
+	  filter: hue-rotate(360deg);
+	}
+  }
+  
