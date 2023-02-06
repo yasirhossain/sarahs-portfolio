@@ -1,8 +1,12 @@
 import { useState, createContext } from 'react'
 
-export const NavContext = createContext();
+const NavContext = createContext({});
+
+export { NavContext };
 
 const NavProvider = ({ children }) => {
+	console.log(children);
+
 	const [activeNavLinkId, setActiveNavLinkId] = useState('Home');
 
 	const providerValue = {
