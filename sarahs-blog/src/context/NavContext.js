@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import { useState, createContext } from 'react'
 
-export const NavContext = React.createContext();
+export const NavContext = createContext();
 
 const NavProvider = ({ children }) => {
 	const [activeNavLinkId, setActiveNavLinkId] = useState('Home');

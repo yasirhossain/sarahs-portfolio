@@ -112,7 +112,7 @@ const Videos = (props) => {
     return (          
         <div className={styles.videos}>
             { isLoading ? <CircularProgress className='loading' color='secondary' /> : null }
-            <div className={styles.videos__videos} scrollAxis="vertical">
+            <div className={styles.videos__videos}>
                 {
                 videoCards.map(item => {
                     return (

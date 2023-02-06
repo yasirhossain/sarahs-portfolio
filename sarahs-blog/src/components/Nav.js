@@ -40,7 +40,7 @@ const Nav = () => {
     return (
         <nav className={`${styles.wrapper} ` + `${checked ? styles.active : ''}`}>
             <input type="checkbox" id="active" onChange={handleChange} />
-            <label for="active" className={styles.menuBtn}><MenuIcon className={styles.menuIcon} /></label>
+            <label htmlFor="active" className={styles.menuBtn}><MenuIcon className={styles.menuIcon} /></label>
             <ul>
                 {navLinks.map(({ navLinkId, scrollToId }, idx) => (
                     <NavLink key={idx} navLinkId={navLinkId} scrollToId={scrollToId} />

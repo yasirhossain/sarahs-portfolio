@@ -27,7 +27,7 @@ const Home = () => {
 			<div className={styles.center}>
 				<Image className={styles.signature} src={signature} alt="Sarah Hashim-Waris" />
 				<p>Video Producer / Creative Director / Script Writer / Reporter</p>
-				<button class={styles.primaryButton} role="button" onClick={handleClick}>View Portfolio</button>
+				<button className={styles.primaryButton} role="button" onClick={handleClick}>View Portfolio</button>
 			</div>
 		</section>
 	);
