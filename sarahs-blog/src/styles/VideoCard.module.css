@@ -1,5 +1,5 @@
 .videocard {
-
+    position: relative;
 }
 
 .videocard__image {
@@ -10,10 +10,33 @@
 
 .videocard__info {
     display: flex;
+    position: absolute;
+    font-weight: 700;
+    line-height: 1.2;
+    width: 145px;
+    height: 160px;
+    bottom: 10px;
+    left: -60px;
+    transform: translateZ(30px);
+    justify-content: space-around;
 }
 
 .videocard__text {
+    padding: 11px;
+    margin: -11px;
+    background-clip: border-box;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    display: inline-block;
+}
 
+.videocard__text .divider {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    margin: 10px 1px 13px;
 }
 
 .videocard__text > h4 {
@@ -21,6 +44,11 @@
     font-size: 1em;
     font-weight: 100;
     margin-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 .videocard__text > p {

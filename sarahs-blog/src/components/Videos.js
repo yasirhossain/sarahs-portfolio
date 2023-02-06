@@ -51,6 +51,10 @@ const Videos = (props) => {
             });
         });
 
+        newVideoCards = (newVideoCards.filter((video) => {
+            return video.type === "long-form";
+        }));
+
         setVideoCards(newVideoCards);
         setIsLoading(false);
     }

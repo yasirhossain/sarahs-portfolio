@@ -14,8 +14,8 @@ const VideoCard = (props) => {
           <div className={styles.videocard__info}>
             <div className={styles.videocard__text}>
               <h4>{props.title}</h4>
+              <div className={styles.divider}></div>
               <p>{props.channel}</p>
-              <p>{props.type}</p>
             </div> 
           </div>
         </div>
