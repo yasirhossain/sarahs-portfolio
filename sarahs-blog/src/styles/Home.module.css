@@ -16,6 +16,20 @@
 	padding: 0;
 }
 
+.homeContainer {
+  background-image: url('../../public/featured-banner.jpeg');
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.signature {
+  position: relative;
+  filter: drop-shadow(0 0.2rem 0.25rem rgba(238, 75, 108, 0.5));
+  top: 200px;
+  width: 70%;
+}
+
 .description {
   display: inherit;
   justify-content: inherit;
@@ -71,6 +85,7 @@
 .card h2 {
   font-weight: 600;
   margin-bottom: 0.7rem;
+  color: white;
 }
 
 .card p {
@@ -79,13 +94,6 @@
   font-size: 0.9rem;
   line-height: 1.5;
   max-width: 30ch;
-}
-
-.homeContainer {
-  background-image: url('../../public/featured-banner-2.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .center {
@@ -105,11 +113,7 @@
 }
 
 .center::before {
-  background: var(--secondary-glow);
-  border-radius: 50%;
-  width: 480px;
-  height: 360px;
-  margin-left: -400px;
+
 }
 
 .center::after {

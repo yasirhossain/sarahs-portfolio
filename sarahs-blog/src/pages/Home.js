@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import { useNav } from '@/customHooks/useNav'
 import styles from '@/styles/Home.module.css'
+import signature from '../../public/signature-3.png'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,7 +18,9 @@ const Home = () => {
 	return (
 		<section ref={homeRef} id='homeContainer' className={styles.homeContainer}>
 			<div className={styles.center}>
+				<Image className={styles.signature} src={signature} alt="Sarah Hashim-Waris" />
 				<h1>Sarah Hashim-Waris</h1>
+				<p>Video Producer / Creative Director / Script Writer / Talent</p>
 			</div>
 
 			<div className={styles.grid}>
