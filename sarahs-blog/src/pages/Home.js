@@ -18,7 +18,6 @@ const Home = () => {
 	return (
 		<section ref={homeRef} id='homeContainer' className={styles.homeContainer}>
 			<div className={styles.center}>
-				<Image className={styles.signature} src={signature} alt="Sarah Hashim-Waris" />
 				<h1>Sarah Hashim-Waris</h1>
 				<p>Video Producer / Creative Director / Script Writer / Talent</p>
 			</div>
