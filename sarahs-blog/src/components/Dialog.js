@@ -1,10 +1,7 @@
-import { forwardRef, useState, useContext, useEffect } from 'react'
+import { forwardRef, useState, useEffect } from 'react'
 import Button from '@mui/material/Button'
 import Dialog from '@mui/material/Dialog'
-import ListItemText from '@mui/material/ListItemText'
-import ListItem from '@mui/material/ListItem'
 import List from '@mui/material/List'
-import Divider from '@mui/material/Divider'
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 import IconButton from '@mui/material/IconButton'
@@ -23,7 +20,7 @@ const FullScreenDialog = (props) => {
   const setOpen = props.setDialogOpen;
 
   useEffect(() => {
-    console.log(props);
+
   }, [props]);
 
   const handleClickOpen = () => {
@@ -38,28 +35,22 @@ const FullScreenDialog = (props) => {
     youtubePlayer(video);
   }
 
-  function youtubePlayer(video) {
-    const onPlayerReady = (event) => {
-      // access to player in all event handlers via event.target
-      event.target.pauseVideo();
-    }
-  
-    const opts = {
-      height: '390',
-      width: '640',
-      playerVars: {
-        // https://developers.google.com/youtube/player_parameters
-        autoplay: 1,
-      },
-    };
-  
-    return <YouTube videoId={videoId} id={videoId} opts={opts} onReady={onPlayerReady} />;
+  const onPlayerReady = (event) => {
+    // access to player in all event handlers via event.target
+    event.target.pauseVideo();
   }
+
+  const opts = {
+    height: '360',
+    width: '640',
+    playerVars: {
+      autoplay: 0,
+    },
+  };
 
   return (
     <div>
       <Dialog
-        fullScreen
         open={open}
         onClose={handleClose}
         TransitionComponent={Transition}
@@ -74,25 +65,10 @@ const FullScreenDialog = (props) => {
             >
               <CloseIcon />
             </IconButton>
-            <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div">
-              Sound
-            </Typography>
-            <Button autoFocus color="inherit" onClick={handleClose}>
-              save
-            </Button>
           </Toolbar>
         </AppBar>
         <List>
-          <ListItem button>
-            <ListItemText primary="Phone ringtone" secondary="Titania" />
-          </ListItem>
-          <Divider />
-          <ListItem button>
-            <ListItemText
-              primary="Default notification ringtone"
-              secondary="Tethys"
-            />
-          </ListItem>
+            { videoRef ? <YouTube videoId={videoRef} opts={opts} onReady={onPlayerReady} /> : null }
         </List>
       </Dialog>
     </div>

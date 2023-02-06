@@ -14,8 +14,6 @@ const Portfolio = () => {
 	const portfolioRef = useNav('Portfolio');
 
 	useEffect(() => {
-        console.log(videoRef);
-		console.log(dialogOpen);
     }, [videoRef, dialogOpen]);
 
 	return (

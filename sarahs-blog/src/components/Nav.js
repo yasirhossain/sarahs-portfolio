@@ -5,7 +5,7 @@ import styles from '@/styles/Nav.module.css'
 const navLinks = [
     { navLinkId: 'Home', scrollToId: 'homeContainer' },
     { navLinkId: 'Portfolio', scrollToId: 'portfolioContainer' },
-    { navLinkId: 'Contact', scrollToId: 'contactContainer' },
+    // { navLinkId: 'Contact', scrollToId: 'contactContainer' },
 ];
 
 const NavLink = ({ navLinkId, scrollToId }) => {

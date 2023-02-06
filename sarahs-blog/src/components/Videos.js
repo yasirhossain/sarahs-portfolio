@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef, setElement } from 'react'
 import axios from 'axios'
 import { DateTime } from 'luxon'
 import CircularProgress from '@mui/material/CircularProgress'
@@ -6,6 +6,7 @@ import Alert from '@mui/material/Alert'
 import styles from '@/styles/Videos.module.css'
 import VideoCard from '@/components/VideoCard'
 import { staticVideos, imageSize } from '@/video-portfolio'
+import { Parallax } from 'react-scroll-parallax'
 
 const Videos = (props) => {
     const [videoCards, setVideoCards] = useState([]);
@@ -13,8 +14,13 @@ const Videos = (props) => {
     const [isError, setIsError] = useState(false);
     const [videos, setVideos] = useState(staticVideos);
 
+    const a = [0, 200];
+    const b = [0, -200];
+    const targetRef = useRef();
+
     useEffect(() => {
         getStaticVideos();
+        //setElement(targetRef.current);
     }, []);
 
     function youtubeParser(url){
@@ -102,7 +108,7 @@ const Videos = (props) => {
     return (          
         <div className={styles.videos}>
             { isLoading ? <CircularProgress className='loading' color='secondary' /> : null }
-            <div className={styles.videos__videos}>
+            <div className={styles.videos__videos} scrollAxis="vertical">
                 {
                 videoCards.map(item => {
                     return (

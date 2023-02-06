@@ -18,7 +18,8 @@
 
 .videocard__text > h4 {
     width: 100%;
-    font-size: 14px;
+    font-size: 1em;
+    font-weight: 100;
     margin-bottom: 5px;
 }
 
