@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useNav } from '@/customHooks/useNav'
 import Videos from '@/components/Videos'
 import Dialog from '@/components/Dialog'
+import styles from '@/styles/Pages.module.scss'
 
 const Portfolio = () => {
 	// useNav takes in a navLinkId and returns a ref
@@ -17,7 +18,7 @@ const Portfolio = () => {
     }, [videoRef, dialogOpen]);
 
 	return (
-		<section ref={portfolioRef} id='portfolioContainer'>
+		<section ref={portfolioRef} id='portfolioContainer' className={styles.portfolioContainer}>
 			<Dialog videoRef={videoRef} dialogOpen={dialogOpen} setDialogOpen={setDialogOpen} />
 			<Videos setVideoRef={setVideoRef} setDialogOpen={setDialogOpen} />
 		</section>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNav } from '@/customHooks/useNav'
+import styles from '@/styles/Pages.module.scss'
 
 const Contact = () => {
 	// useNav takes in a navLinkId and returns a ref
@@ -10,7 +11,7 @@ const Contact = () => {
 	const contactRef = useNav('Contact');
 
 	return (
-		<section ref={contactRef} id='contactContainer'>
+		<section ref={contactRef} id='contactContainer' className={styles.contactContainer}>
 			<div>
 				<h3>CONTACT</h3>
 				<p>This is the contact section</p>

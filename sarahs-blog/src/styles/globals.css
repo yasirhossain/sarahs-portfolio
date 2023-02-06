@@ -111,11 +111,6 @@ section {
   z-index: 1;
   width: 100vw;
 	height: 100vh;
-  background-image: linear-gradient(
-    -90deg,
-    rgba(241, 224, 229, 0.5) 60%,
-    rgba(157, 193, 213, 0.5) 90%
-  );;
 }
 
 section:nth-child(even) {
@@ -137,6 +132,19 @@ section div {
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
+}
+
+.MuiBackdrop-root.MuiModal-backdrop {
+  background-color: rgb(26 21 39 / 95%);
+}
+
+.MuiPaper-root.MuiPaper-elevation {
+  max-width: 640px;
+}
+
+.MuiList-root.MuiList-padding {
+  padding: 0px;
+  background: black;
 }
 
 @media screen and (max-width: 900px) {

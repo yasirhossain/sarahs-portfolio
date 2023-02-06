@@ -9,6 +9,7 @@ import Typography from '@mui/material/Typography'
 import CloseIcon from '@mui/icons-material/Close'
 import Slide from '@mui/material/Slide'
 import YouTube from 'react-youtube'
+import styles from '@/styles/Dialog.module.scss'
 
 const Transition = forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -54,19 +55,8 @@ const FullScreenDialog = (props) => {
         open={open}
         onClose={handleClose}
         TransitionComponent={Transition}
+        className={styles.dialogContainer}
       >
-        <AppBar sx={{ position: 'relative' }}>
-          <Toolbar>
-            <IconButton
-              edge="start"
-              color="inherit"
-              onClick={handleClose}
-              aria-label="close"
-            >
-              <CloseIcon />
-            </IconButton>
-          </Toolbar>
-        </AppBar>
         <List>
             { videoRef ? <YouTube videoId={videoRef} opts={opts} onReady={onPlayerReady} /> : null }
         </List>

@@ -25,6 +25,15 @@
 	padding: 0;
 }
 
+.portfolioContainer {
+  background-color: #1a1527;
+  height: auto;
+}
+
+.contactContainer {
+  display: none;
+}
+
 .homeContainer {
   background-image: url('../../public/featured-banner.jpeg');
   background-position: top center;

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import styles from '@/styles/VideoCard.module.css'
+import styles from '@/styles/VideoCard.module.scss'
 import { VideoContext } from '@/context/VideoContext'
 
 const VideoCard = (props) => {

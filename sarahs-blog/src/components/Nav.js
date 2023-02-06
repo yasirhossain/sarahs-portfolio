@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { NavContext } from '@/context/NavContext'
-import styles from '@/styles/Nav.module.css'
+import styles from '@/styles/Nav.module.scss'
 
 const navLinks = [
     { navLinkId: 'Home', scrollToId: 'homeContainer' },
