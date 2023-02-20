@@ -5,6 +5,15 @@ export const staticVideos = [
     "channel": "Buzzfeed Unsolved",
     "show": "Buzzfeed Unsolved",
     "title": "Rise & Fall Season 2 Trailer",
+    "video": "https://www.youtube.com/watch?v=NTdz7KbOpd0",
+    "image": "https://i.ytimg.com/vi/NTdz7KbOpd0/hqdefault.jpg",
+    "type": "long-form"
+  },
+  {
+    "company": "Buzzfeed",
+    "channel": "Buzzfeed Unsolved",
+    "show": "Buzzfeed Unsolved",
+    "title": "Rise & Fall Season 2 Trailer",
     "video": "https://www.youtube.com/watch?v=HpeeQC_979M",
     "image": "https://i.ytimg.com/vi/HpeeQC_979M/hqdefault.jpg",
     "type": "long-form"
