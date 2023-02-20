@@ -35,7 +35,7 @@
 }
 
 .homeContainer {
-  background-image: url('../../public/featured-banner-final-v2.jpg');
+  background-image: url('../../public/featured-banner.jpg');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -45,7 +45,7 @@
 .homeContainer:after {
     content: '';
     left: 0;
-    right: 0;
+    right: 0;  
     bottom: 0;
     position: absolute;
     z-index: 0;
