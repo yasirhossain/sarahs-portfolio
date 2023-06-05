@@ -5,9 +5,9 @@ import Contact from '@/pages/Contact'
 export default function Main() {
   return (
     <main>
-        <Home />
-		<Portfolio />
-		<Contact />
+      <Home />
+		  <Portfolio />
+		  <Contact />
     </main>
   )
 }
