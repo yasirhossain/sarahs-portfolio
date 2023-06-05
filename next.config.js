@@ -1,2 +1,14 @@
-const withNextra = require('nextra')('nextra-theme-blog', './theme.config.js')
-module.exports = withNextra()
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+}
+
+module.exports = nextConfig
+
+const path = require('path')
+
+module.exports = {
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
+  },
+}
